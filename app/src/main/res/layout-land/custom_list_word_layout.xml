@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/cardview_margin_8dp"
+    card_view:cardCornerRadius="@dimen/card_view_corner_radius"
+    card_view:cardElevation="@dimen/card_view_elevation">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- android:adjustViewBounds="true"
+                android:scaleType="centerCrop"-->
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/image_width_lang"
+            android:layout_height="@dimen/image_height"
+            android:adjustViewBounds="true"
+            tools:srcCompat="@tools:sample/avatars" />
+
+
+        <TextView
+            android:id="@+id/name_of_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="@dimen/margin_bot_8dp"
+            android:gravity="left"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            tools:text="name of the place" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_of_place"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="@dimen/margin_bot_8dp"
+            android:gravity="left"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/secondary_text"
+            tools:text="address" />
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

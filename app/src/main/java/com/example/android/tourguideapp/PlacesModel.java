@@ -1,7 +1,5 @@
 package com.example.android.tourguideapp;
 
-import android.content.res.Resources;
-
 import java.util.ArrayList;
 
 public class PlacesModel {
@@ -57,8 +55,11 @@ public class PlacesModel {
     public static ArrayList<PlacesModel> getHotelList() {
 
         ArrayList<PlacesModel> model = new ArrayList<>();
-        model.add(new PlacesModel(Resources.getSystem().getString(R.string.Marriott_Hotel), Resources.getSystem().getString(R.string.Marriott_Hotel_address)
-       ));
+        model.add(new PlacesModel("Madinah Marriott Hotel", "King Faisal Street", R.drawable.medmc_exterior));
+        model.add(new PlacesModel("Golden Tulip Al Mektan", "Al Salam Street , West Area", R.drawable.golden_tulip_al_mektan));
+        model.add(new PlacesModel("Dallah Taibah Hotel ", "Abarzar street", R.drawable.dallah_taibah_hotel));
+        model.add(new PlacesModel("Golden Garden AlMadhina Hotel", "Saad bin. Khithamah Beside National hospital", R.drawable.golden_garden));
+        model.add(new PlacesModel("Coral Al Madinah Hotel  ", "Abu Ayyub Al Ansari - Bani Khidrah District", R.drawable.coral));
 
 
         return model;

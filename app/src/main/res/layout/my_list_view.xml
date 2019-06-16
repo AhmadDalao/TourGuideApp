@@ -3,6 +3,8 @@
     android:id="@+id/myList"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:divider="@null"
+    android:dividerHeight="16dp"
     android:drawSelectorOnTop="true">
 
     <!-- android:drawSelectorOnTop="true" it will show the animation
