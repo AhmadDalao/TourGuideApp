@@ -10,10 +10,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class PlacesArrayAdapter extends ArrayAdapter<PlacesModel> {
+public class myPlacesArrayAdapter extends ArrayAdapter<placesModel> {
 
 
-    public PlacesArrayAdapter(Context context, ArrayList<PlacesModel> placesModels) {
+    public myPlacesArrayAdapter(Context context, ArrayList<placesModel> placesModels) {
         super(context, 0, placesModels);
     }
 
@@ -28,7 +28,7 @@ public class PlacesArrayAdapter extends ArrayAdapter<PlacesModel> {
 
         }
 
-        PlacesModel places = getItem(position);
+        placesModel places = getItem(position);
 
         TextView placeName = (TextView) listItem.findViewById(R.id.name_of_place);
         placeName.setText(places.getmPlaceName());

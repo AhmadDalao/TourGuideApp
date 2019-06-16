@@ -33,8 +33,8 @@ public class HotelFragment extends Fragment {
     }
 
     private void populateHotelList() {
-        ArrayList<PlacesModel> placesModels = PlacesModel.getHotelList();
-        PlacesArrayAdapter adapter = new PlacesArrayAdapter(this.getContext(), placesModels);
+        ArrayList<placesModel> placesModels = placesModel.getHotelList();
+        myPlacesArrayAdapter adapter = new myPlacesArrayAdapter(this.getContext(), placesModels);
         ListView listView = (ListView) view.findViewById(R.id.myList);
         listView.setAdapter(adapter);
 

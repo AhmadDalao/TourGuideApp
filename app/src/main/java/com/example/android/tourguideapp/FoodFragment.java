@@ -6,7 +6,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,7 +21,6 @@ public class FoodFragment extends Fragment {
     }
 
 
-
     private View view;
 
 
@@ -28,7 +29,15 @@ public class FoodFragment extends Fragment {
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.my_list_view, container, false);
 
+        populateFoodList();
         return view;
+    }
+
+    private void populateFoodList() {
+        ArrayList<placesModel> models = placesModel.getFoodList();
+        myPlacesArrayAdapter adapter = new myPlacesArrayAdapter(this.getContext(), models);
+        ListView listView = (ListView) view.findViewById(R.id.myList);
+        listView.setAdapter(adapter);
     }
 
 }
