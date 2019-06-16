@@ -6,18 +6,19 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class forthFragment extends Fragment {
+public class HotelFragment extends Fragment {
 
 
-    public forthFragment() {
+    public HotelFragment() {
         // Required empty public constructor
     }
-
 
 
     private View view;
@@ -27,8 +28,16 @@ public class forthFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.my_list_view, container, false);
-
+        populateHotelList();
         return view;
+    }
+
+    private void populateHotelList() {
+        ArrayList<PlacesModel> placesModels = PlacesModel.getHotelList();
+        PlacesArrayAdapter adapter = new PlacesArrayAdapter(this.getContext(), placesModels);
+        ListView listView = (ListView) view.findViewById(R.id.myList);
+        listView.setAdapter(adapter);
+
     }
 
 }

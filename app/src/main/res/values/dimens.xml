@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_width">400dp</dimen>
+    <dimen name="image_height">180dp</dimen>
+    <dimen name="margin_bot_8dp">8dp</dimen>
+
+    <!-- card view dimen-->
+    <dimen name="card_view_corner_radius">8dp</dimen>
+    <dimen name="card_view_elevation">8dp</dimen>
+    <dimen name="cardview_margin_8dp">8dp</dimen>
+
+
+    <!-- image view -->
+    <dimen name="imageView_margin">16dp</dimen>
+
+
+
+</resources>

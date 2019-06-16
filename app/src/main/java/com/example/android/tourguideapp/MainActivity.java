@@ -26,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewpager(ViewPager viewPager) {
         myViewpagerAdapter adapter = new myViewpagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new FirstFragment(), "one");
-        adapter.addFragment(new secondFragment(), "two ");
-        adapter.addFragment(new thirdFragment(), "three");
-        adapter.addFragment(new forthFragment(), "forth");
+        adapter.addFragment(new HotelFragment(), "Hotels");
+        adapter.addFragment(new FoodFragment(), "Food ");
+        adapter.addFragment(new ShoppingFragment(), "Shopping");
+        adapter.addFragment(new PlacesFragment(), "Places");
         viewPager.setAdapter(adapter);
     }
 
