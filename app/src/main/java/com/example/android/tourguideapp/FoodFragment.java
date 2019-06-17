@@ -1,11 +1,13 @@
 package com.example.android.tourguideapp;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -21,6 +23,11 @@ public class FoodFragment extends Fragment {
     }
 
 
+    public static final String KEY_IMAGE = "KEE_IMAGE";
+    public static final String KEY_PLACE_NAME = "KEY_PLACE_NAME";
+    public static final String KEY_PLACE_ADDRESS = "KEY_PLACE_ADDRESS";
+
+
     private View view;
 
 
@@ -34,10 +41,26 @@ public class FoodFragment extends Fragment {
     }
 
     private void populateFoodList() {
-        ArrayList<placesModel> models = placesModel.getFoodList();
+        final ArrayList<placesModel> models = placesModel.getFoodList();
         myPlacesArrayAdapter adapter = new myPlacesArrayAdapter(this.getContext(), models);
         ListView listView = (ListView) view.findViewById(R.id.myList);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                placesModel placesModel = models.get(position);
+
+                Bundle bundle = new Bundle();
+                bundle.putString(KEY_PLACE_NAME, placesModel.getmPlaceName());
+                bundle.putString(KEY_PLACE_ADDRESS, placesModel.getmPlaceAddress());
+                bundle.putInt(KEY_IMAGE, placesModel.getmImageRecourse());
+
+                Intent intent = new Intent(getActivity(), DetailActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+
+            }
+        });
     }
 
 }
