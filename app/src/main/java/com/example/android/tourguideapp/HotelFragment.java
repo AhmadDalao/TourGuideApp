@@ -46,12 +46,13 @@ public class HotelFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                placesModel words = placesModels.get(position);
+
+                placesModel items = placesModels.get(position);
 
                 Bundle bundle = new Bundle();
-                bundle.putString(KEY_PLACE_NAME, words.getmPlaceName());
-                bundle.getString(KEY_PLACE_ADDRESS, words.getmPlaceAddress());
-                bundle.putInt(KEY_IMAGE, words.getmImageRecourse());
+                bundle.putString(KEY_PLACE_NAME, items.getmPlaceName());
+                bundle.putString(KEY_PLACE_ADDRESS, items.getmPlaceAddress());
+                bundle.putInt(KEY_IMAGE, items.getmImageRecourse());
 
                 Intent intent = new Intent(getActivity(), DetailActivity.class);
                 intent.putExtras(bundle);

@@ -12,8 +12,12 @@ import static com.example.android.tourguideapp.HotelFragment.KEY_PLACE_ADDRESS;
 import static com.example.android.tourguideapp.HotelFragment.KEY_PLACE_NAME;
 
 
-
 public class DetailActivity extends AppCompatActivity {
+
+    private static final int NO_Image = -1;
+    private String theNameFromFragment;
+    private String theAddressFromFragment;
+    private int theImageFromFragment = NO_Image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +26,11 @@ public class DetailActivity extends AppCompatActivity {
 
 
         Bundle bundle = getIntent().getExtras();
-        String theNameFromFragment = bundle.getString(KEY_PLACE_NAME);
-        String theAddressFromFragment = bundle.getString(KEY_PLACE_ADDRESS);
-        int theImageFromFragment = bundle.getInt(KEY_IMAGE);
-
+        if (bundle != null) {
+            theNameFromFragment = bundle.getString(KEY_PLACE_NAME);
+            theAddressFromFragment = bundle.getString(KEY_PLACE_ADDRESS);
+            theImageFromFragment = bundle.getInt(KEY_IMAGE);
+        }
 
         TextView namePlace = (TextView) findViewById(R.id.name_detail);
         namePlace.setText(theNameFromFragment);
@@ -35,13 +40,20 @@ public class DetailActivity extends AppCompatActivity {
         address.setMovementMethod(LinkMovementMethod.getInstance());
 
 
-        ImageView imageview = (ImageView) findViewById(R.id.icon);
-        if (imageview == null) {
-            imageview.setVisibility(View.GONE);
-        } else
-            imageview.setImageResource(theImageFromFragment);
+        ImageView image_place = (ImageView) findViewById(R.id.icon);
+        if(hasImage()){
+            image_place.setVisibility(View.VISIBLE);
+            image_place.setImageResource(theImageFromFragment);
+        }else
+        {
+            image_place.setVisibility(View.GONE);
+        }
 
     }
 
+
+    private boolean hasImage(){
+        return theImageFromFragment != NO_Image;
+    }
 
 }

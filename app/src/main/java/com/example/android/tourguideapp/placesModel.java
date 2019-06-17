@@ -10,6 +10,10 @@ public class placesModel {
     private int mImageRecourse = NO_IMAGE;
     private static final int NO_IMAGE = -1;
 
+    public placesModel() {
+
+    }
+
     public placesModel(String mPlaceName, String mPlaceAddress, int mImageRecourse) {
         this.mPlaceName = mPlaceName;
         this.mPlaceAddress = mPlaceAddress;
