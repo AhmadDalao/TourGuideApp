@@ -1,11 +1,13 @@
 package com.example.android.tourguideapp;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -24,6 +26,11 @@ public class PlacesFragment extends Fragment {
     private View view;
 
 
+    public static final String KEY_IMAGE = "KEE_IMAGE";
+    public static final String KEY_PLACE_NAME = "KEY_PLACE_NAME";
+    public static final String KEY_PLACE_ADDRESS = "KEY_PLACE_ADDRESS";
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -34,11 +41,27 @@ public class PlacesFragment extends Fragment {
     }
 
     private void populatePlaceList() {
-        ArrayList<placesModel> placesModels = placesModel.getPlacesList();
+        final ArrayList<placesModel> placesModels = placesModel.getPlacesList();
         myPlacesArrayAdapter adapter = new myPlacesArrayAdapter(this.getContext(), placesModels);
         ListView listView = (ListView) view.findViewById(R.id.myList);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                placesModel items = placesModels.get(position);
+
+                Bundle bundle = new Bundle();
+                bundle.putString(KEY_PLACE_NAME, items.getmPlaceName());
+                bundle.putString(KEY_PLACE_ADDRESS, items.getmPlaceAddress());
+                bundle.putInt(KEY_IMAGE, items.getmImageRecourse());
+
+                Intent intent = new Intent(view.getContext(), DetailActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+
+            }
+        });
     }
 
 }
