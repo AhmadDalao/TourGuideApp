@@ -26,6 +26,7 @@ public class FoodFragment extends Fragment {
     public static final String KEY_IMAGE = "KEE_IMAGE";
     public static final String KEY_PLACE_NAME = "KEY_PLACE_NAME";
     public static final String KEY_PLACE_ADDRESS = "KEY_PLACE_ADDRESS";
+    public static final String KEY_PLACE_DETAIL = "KEY_PLACE_DETAIL";
 
 
     private View view;
@@ -54,6 +55,7 @@ public class FoodFragment extends Fragment {
                 bundle.putString(KEY_PLACE_NAME, placesModel.getmPlaceName());
                 bundle.putString(KEY_PLACE_ADDRESS, placesModel.getmPlaceAddress());
                 bundle.putInt(KEY_IMAGE, placesModel.getmImageRecourse());
+                bundle.putString(KEY_PLACE_DETAIL, placesModel.getmPlaceDetail());
 
                 Intent intent = new Intent(getActivity(), DetailActivity.class);
                 intent.putExtras(bundle);

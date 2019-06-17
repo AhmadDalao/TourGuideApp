@@ -25,7 +25,7 @@
 
     <TextView
         android:id="@+id/name_detail"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/icon"
         android:layout_marginLeft="8dp"
@@ -39,7 +39,7 @@
 
     <TextView
         android:id="@+id/address_detail"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/name_detail"
         android:layout_marginLeft="8dp"
@@ -53,27 +53,12 @@
         tools:text="address" />
 
 
-    <TextView
-        android:id="@+id/information"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/address_detail"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="@dimen/margin_top_8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="@dimen/margin_bot_8dp"
-        android:autoLink="map"
-        android:gravity="left"
-        android:textAppearance="?android:textAppearanceLarge"
-        android:textColor="@color/primary_text"
-        android:text="@string/information" />
-
 
     <TextView
         android:id="@+id/information_detail"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/information"
+        android:layout_below="@+id/address_detail"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="@dimen/margin_top_8dp"
         android:layout_marginRight="8dp"

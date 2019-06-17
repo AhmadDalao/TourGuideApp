@@ -30,7 +30,7 @@
 
         <TextView
             android:id="@+id/name_of_place"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageView"
             android:layout_marginLeft="8dp"
@@ -44,7 +44,7 @@
 
         <TextView
             android:id="@+id/address"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/name_of_place"
             android:layout_marginLeft="8dp"
