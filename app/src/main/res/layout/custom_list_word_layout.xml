@@ -27,6 +27,7 @@
             tools:srcCompat="@tools:sample/avatars" />
 
 
+
         <TextView
             android:id="@+id/name_of_place"
             android:layout_width="match_parent"
@@ -55,6 +56,15 @@
             android:textColor="@color/secondary_text"
             tools:text="address" />
 
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_below="@+id/name_of_place"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_chevron_right_black_24dp" />
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>

@@ -24,6 +24,8 @@ public class ShoppingFragment extends Fragment {
 
 
     private View view;
+
+
     public static final String KEY_IMAGE = "KEE_IMAGE";
     public static final String KEY_PLACE_NAME = "KEY_PLACE_NAME";
     public static final String KEY_PLACE_ADDRESS = "KEY_PLACE_ADDRESS";
