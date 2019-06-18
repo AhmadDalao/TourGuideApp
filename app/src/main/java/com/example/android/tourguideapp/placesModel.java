@@ -4,14 +4,37 @@ import java.util.ArrayList;
 
 public class placesModel {
 
-
-    private String mPlaceName;
-
-
+    private double mLatitude;
+    private double mLongitude;
     private String mPlaceAddress;
     private int mImageRecourse = NO_IMAGE;
+    private String mPlaceName;
     private String mPlaceDetail;
     private static final int NO_IMAGE = -1;
+
+    public double getmLatitude() {
+        return mLatitude;
+    }
+
+    public void setmLatitude(double mLatitude) {
+        this.mLatitude = mLatitude;
+    }
+
+    public double getmLongitude() {
+        return mLongitude;
+    }
+
+    public void setmLongitude(double mLongitude) {
+        this.mLongitude = mLongitude;
+    }
+
+
+    public placesModel(String mPlaceName, String mPlaceAddress, double mLatitude, double mLongitude) {
+        this.mPlaceName = mPlaceName;
+        this.mPlaceAddress = mPlaceAddress;
+        this.mLatitude = mLatitude;
+        this.mLongitude = mLongitude;
+    }
 
 
     public placesModel() {

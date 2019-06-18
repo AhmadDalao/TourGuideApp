@@ -10,4 +10,19 @@
     <string name="Marriott_Hotel_address"> King Faisal Street</string>
     <string name="information">Information</string>
 
+    <!-- food -->
+
+
+    <string name="food01">Albaik Restaurant</string>
+    <string name="food02">Albaik</string>
+    <string name="food03">Herfy</string>
+    <string name="food04">KFC</string>
+    <string name="food05">STARBUCKS COFFEE</string>
+    <string name="food06">McDonald\'s</string>
+    <string name="food07">Cinnabon</string>
+    <string name="food08">Karachi Restaurant</string>
+    <string name="food09">Mairaj Indian and Chinese</string>
+    <string name="food10">Hadramout Restaurant</string>
+    <string name="food_time">7AM - 10PM</string>
+
 </resources>
