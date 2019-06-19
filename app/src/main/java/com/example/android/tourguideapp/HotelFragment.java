@@ -39,8 +39,26 @@ public class HotelFragment extends Fragment {
     }
 
     private void populateHotelList() {
-        final ArrayList<placesModel> placesModels = placesModel.getHotelList();
-        myPlacesArrayAdapter adapter = new myPlacesArrayAdapter(this.getContext(), placesModels);
+
+        final ArrayList<placesModel> model = new ArrayList<>();
+        model.add(new placesModel(getString(R.string.MadinaMarriottHotel_1), getString(R.string.address_1),
+                R.drawable.medmc_exterior, getString(R.string.marriott_detail)));
+
+        model.add(new placesModel(getString(R.string.GoldenTulipAlMektan), getString(R.string.AlSalamStreetWestArea_hotel2), R.drawable.golden_tulip_al_mektan,
+                getString(R.string.mektan_detail)));
+
+        model.add(new placesModel(getString(R.string.DallahTaibahHotel), getString(R.string.Abarzarstreet),
+                R.drawable.dallah_taibah_hotel, getString(R.string.dallah_detail)));
+
+
+        model.add(new placesModel(getString(R.string.GoldenGardenAlmedinaHotel), getString(R.string.GoldenGardenAddress), R.drawable.golden_garden, getString(R.string.GoldenDardenDetail)));
+
+
+        model.add(new placesModel(getString(R.string.CoralAlMadinahHotel), getString(R.string.CoralAddress),
+                R.drawable.coral, getString(R.string.CoralDetail)));
+
+
+        myPlacesArrayAdapter adapter = new myPlacesArrayAdapter(this.getContext(), model);
         ListView listView = (ListView) view.findViewById(R.id.myList);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -48,7 +66,7 @@ public class HotelFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
 
-                placesModel items = placesModels.get(position);
+                placesModel items = model.get(position);
 
                 Bundle bundle = new Bundle();
                 bundle.putString(KEY_PLACE_NAME, items.getmPlaceName());

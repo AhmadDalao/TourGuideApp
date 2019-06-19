@@ -42,7 +42,17 @@ public class ShoppingFragment extends Fragment {
 
     private void populateShoppingList() {
 
-        final ArrayList<placesModel> models = placesModel.getShoppingList();
+
+        final ArrayList<placesModel> models = new ArrayList<>();
+        models.add(new placesModel(getString(R.string.alrashed), getString(R.string.alrashedAddress), R.drawable.aalrashed, getString(R.string.alrashedDetail)));
+
+        models.add(new placesModel(getString(R.string.adel), getString(R.string.adelAddress), R.drawable.screenshot_2, getString(R.string.adelDetail)));
+
+
+        models.add(new placesModel(getString(R.string.noor), getString(R.string.noorAddress), R.drawable.alnoor, getString(R.string.noor_detail)
+        ));
+
+
         myPlacesArrayAdapter adapter = new myPlacesArrayAdapter(this.getContext(), models);
         ListView listView = (ListView) view.findViewById(R.id.myList);
         listView.setAdapter(adapter);

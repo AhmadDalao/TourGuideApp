@@ -45,10 +45,11 @@ public class PlacesFragment extends Fragment {
     private void populatePlaceList() {
 
         final ArrayList<placesModel> placesSpots = new ArrayList<>();
-        placesSpots.add(new placesModel(getString(R.string.spot01), getString(R.string.place_type_01), 24.4878472, 39.6481492, R.drawable.alharam));
-        placesSpots.add(new placesModel(getString(R.string.spot02), getString(R.string.place_type_02), 24.4619578, 39.5966926, R.drawable.museum));
-        placesSpots.add(new placesModel(getString(R.string.spot03), getString(R.string.place_type_01), 24.439252, 39.6150999, R.drawable.quba));
-        placesSpots.add(new placesModel(getString(R.string.spot04), getString(R.string.place_type_02), 24.5214825, 39.5884737, R.drawable.auhud));
+        placesSpots.add(new placesModel(getString(R.string.spot01), getString(R.string.place_type_01), 24.4878472, 39.6481492,
+                R.drawable.alharam, getString(R.string.alHaramDetail)));
+        placesSpots.add(new placesModel(getString(R.string.spot02), getString(R.string.place_type_02), 24.4619578, 39.5966926, R.drawable.museum, getString(R.string.museumDetail)));
+        placesSpots.add(new placesModel(getString(R.string.spot03), getString(R.string.place_type_01), 24.439252, 39.6150999, R.drawable.quba, getString(R.string.masjid_quba_detail)));
+        placesSpots.add(new placesModel(getString(R.string.spot04), getString(R.string.place_type_02), 24.5214825, 39.5884737, R.drawable.auhud, getString(R.string.jabel_auhud_detail)));
 
 
         myPlacesArrayAdapter adapter = new myPlacesArrayAdapter(this.getContext(), placesSpots);
