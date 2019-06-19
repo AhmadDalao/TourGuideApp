@@ -37,6 +37,14 @@ public class placesModel {
     }
 
 
+    public placesModel(String mPlaceName, String mPlaceAddress, double mLatitude, double mLongitude, int mImageRecourse) {
+        this.mPlaceName = mPlaceName;
+        this.mPlaceAddress = mPlaceAddress;
+        this.mLatitude = mLatitude;
+        this.mLongitude = mLongitude;
+        this.mImageRecourse = mImageRecourse;
+    }
+
     public placesModel() {
 
     }

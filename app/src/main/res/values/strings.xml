@@ -25,4 +25,18 @@
     <string name="food10">Hadramout Restaurant</string>
     <string name="food_time">7AM - 10PM</string>
 
+
+
+    <!--  places -->
+    <string name="spot01">Al Masjid an Nabawi</string>
+    <string name="spot02">Al Madina Museum in Al Hejaz Railway Station</string>
+    <string name="spot03">Masjid Quba</string>
+    <string name="spot04">Jabal Auhud</string>
+    <string name="spot05">Old Ottoman Garrison</string>
+
+    <string name="place_type_01">Religious</string>
+    <string name="place_type_02">Landscape</string>
+
+
+
 </resources>
