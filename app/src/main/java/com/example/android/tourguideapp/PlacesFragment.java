@@ -26,12 +26,6 @@ public class PlacesFragment extends Fragment {
     private View view;
 
 
-    public static final String KEY_IMAGE = "KEE_IMAGE";
-    public static final String KEY_PLACE_NAME = "KEY_PLACE_NAME";
-    public static final String KEY_PLACE_ADDRESS = "KEY_PLACE_ADDRESS";
-    public static final String KEY_PLACE_DETAIL = "KEY_PLACE_DETAIL";
-    public static final String KEY_LATITUDE = "KEY_LATITUDE";
-    public static final String KEY_LONGITUDE = "KEY_LONGITUDE";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -62,12 +56,12 @@ public class PlacesFragment extends Fragment {
                 placesModel items = placesSpots.get(position);
 
                 Bundle bundle = new Bundle();
-                bundle.putString(KEY_PLACE_NAME, items.getmPlaceName());
-                bundle.putString(KEY_PLACE_ADDRESS, items.getmPlaceAddress());
-                bundle.putInt(KEY_IMAGE, items.getmImageRecourse());
-                bundle.putString(KEY_PLACE_DETAIL, items.getmPlaceDetail());
-                bundle.putDouble(KEY_LATITUDE, items.getmLatitude());
-                bundle.putDouble(KEY_LONGITUDE, items.getmLongitude());
+                bundle.putString(myConstants.getKeyPlaceName(), items.getmPlaceName());
+                bundle.putString(myConstants.getKeyPlaceAddress(), items.getmPlaceAddress());
+                bundle.putInt(myConstants.getKeyImage(), items.getmImageRecourse());
+                bundle.putString(myConstants.getKeyPlaceDetail(), items.getmPlaceDetail());
+                bundle.putDouble(myConstants.getKeyLatitude(), items.getmLatitude());
+                bundle.putDouble(myConstants.getKeyLongitude(), items.getmLongitude());
 
                 Intent intent = new Intent(view.getContext(), DetailActivity.class);
                 intent.putExtras(bundle);

@@ -26,12 +26,6 @@ public class ShoppingFragment extends Fragment {
     private View view;
 
 
-    public static final String KEY_IMAGE = "KEE_IMAGE";
-    public static final String KEY_PLACE_NAME = "KEY_PLACE_NAME";
-    public static final String KEY_PLACE_ADDRESS = "KEY_PLACE_ADDRESS";
-    public static final String KEY_PLACE_DETAIL = "KEY_PLACE_DETAIL";
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -62,10 +56,10 @@ public class ShoppingFragment extends Fragment {
                 placesModel placesModel = models.get(position);
 
                 Bundle bundle = new Bundle();
-                bundle.putString(KEY_PLACE_NAME, placesModel.getmPlaceName());
-                bundle.putString(KEY_PLACE_ADDRESS, placesModel.getmPlaceAddress());
-                bundle.putInt(KEY_IMAGE, placesModel.getmImageRecourse());
-                bundle.putString(KEY_PLACE_DETAIL, placesModel.getmPlaceDetail());
+                bundle.putString(myConstants.getKeyPlaceName(), placesModel.getmPlaceName());
+                bundle.putString(myConstants.getKeyPlaceAddress(), placesModel.getmPlaceAddress());
+                bundle.putInt(myConstants.getKeyImage(), placesModel.getmImageRecourse());
+                bundle.putString(myConstants.getKeyPlaceDetail(), placesModel.getmPlaceDetail());
 
                 Intent intent = new Intent(getActivity(), DetailActivity.class);
                 intent.putExtras(bundle);

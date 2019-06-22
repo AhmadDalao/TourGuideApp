@@ -8,13 +8,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import static com.example.android.tourguideapp.FoodFragment.KEY_LATITUDE;
-import static com.example.android.tourguideapp.FoodFragment.KEY_LONGITUDE;
-import static com.example.android.tourguideapp.HotelFragment.KEY_IMAGE;
-import static com.example.android.tourguideapp.HotelFragment.KEY_PLACE_ADDRESS;
-import static com.example.android.tourguideapp.HotelFragment.KEY_PLACE_DETAIL;
-import static com.example.android.tourguideapp.HotelFragment.KEY_PLACE_NAME;
-
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -36,12 +29,12 @@ public class DetailActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
-            theNameFromFragment = bundle.getString(KEY_PLACE_NAME);
-            theAddressFromFragment = bundle.getString(KEY_PLACE_ADDRESS);
-            theImageFromFragment = bundle.getInt(KEY_IMAGE);
-            theDetailFromFragment = bundle.getString(KEY_PLACE_DETAIL);
-            mLatitude = bundle.getDouble(KEY_LATITUDE );
-            mLongitude = bundle.getDouble(KEY_LONGITUDE);
+            theNameFromFragment = bundle.getString(myConstants.getKeyPlaceName());
+            theAddressFromFragment = bundle.getString(myConstants.getKeyPlaceAddress());
+            theImageFromFragment = bundle.getInt(myConstants.getKeyImage());
+            theDetailFromFragment = bundle.getString(myConstants.getKeyPlaceDetail());
+            mLatitude = bundle.getDouble(myConstants.getKeyLatitude());
+            mLongitude = bundle.getDouble(myConstants.getKeyLongitude());
         }
 
         final TextView namePlace = (TextView) findViewById(R.id.name_detail);
